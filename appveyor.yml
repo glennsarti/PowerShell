@@ -14,14 +14,14 @@ install:
   - ps: Import-Module .\tools\Appveyor.psm1
   - ps: Invoke-AppveyorInstall
 
-build_script:
-  - ps: Invoke-AppveyorBuild
+# build_script:
+#   - ps: Invoke-AppveyorBuild
 
-test_script:
-  - ps: Invoke-AppveyorTest
+# test_script:
+#   - ps: Invoke-AppveyorTest
 
-after_test:
-  - ps: Invoke-AppVeyorAfterTest
+# after_test:
+#   - ps: Invoke-AppVeyorAfterTest
 
-on_finish: 
-  - ps: Invoke-AppveyorFinish
+# on_finish: 
+#   - ps: Invoke-AppveyorFinish
