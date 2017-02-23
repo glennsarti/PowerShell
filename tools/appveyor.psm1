@@ -163,7 +163,8 @@ function Invoke-AppVeyorBuild
           Start-PSBuild -Configuration 'CodeCoverage' -PSModuleRestore -Publish
       }
 
-      Start-PSBuild -FullCLR -PSModuleRestore
+      #Start-PSBuild -FullCLR -PSModuleRestore
+      Start-PSBuild -Runtime  win10-x64 -PSModuleRestore
       Start-PSBuild -CrossGen -PSModuleRestore -Configuration 'Release'
 }
 
