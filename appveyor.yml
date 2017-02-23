@@ -1,4 +1,4 @@
-version: 6.0.0-alpha.16-{build}
+version: 6.0.0-alpha.999-{build}
 
 image: Visual Studio 2015
 
@@ -14,8 +14,8 @@ install:
   - ps: Import-Module .\tools\Appveyor.psm1
   - ps: Invoke-AppveyorInstall
 
-# build_script:
-#   - ps: Invoke-AppveyorBuild
+build_script:
+  - ps: Invoke-AppveyorBuild
 
 # test_script:
 #   - ps: Invoke-AppveyorTest
