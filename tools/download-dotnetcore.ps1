@@ -45,7 +45,7 @@ Write-Output "Extracting dotnet SDK"
 Add-Type -Assembly System.IO.Compression.FileSystem | Out-Null
 
 Write-Output "Extracting zipfile..."
-[System.IO.Compression.ZipFile]::ExtractToDirectory($ziZipPathpfile, $ZipPath)
+[System.IO.Compression.ZipFile]::ExtractToDirectory($dotnetZip, $dotnetLocation)
 
 Write-Output "Cleaning downloads..."
 if (Test-Path -Path $dotnetZip) { Remove-Item -Path $dotnetZip -Force -Confirm:$false | Out-Null }
