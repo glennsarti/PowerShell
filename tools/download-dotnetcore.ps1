@@ -10,8 +10,9 @@ $thisFolder = $PSScriptRoot
 $dotnetZip = [System.IO.Path]::GetTempFileName()
 $dotnetLocation = "$env:LocalAppData\Microsoft\dotnet"
 
-Write-Output "Cleaning downloads..."
+Write-Output "Cleaning..."
 if (Test-Path -Path $dotnetZip) { Remove-Item -Path $dotnetZip -Force -Confirm:$false | Out-Null }
+if (Test-Path -Path $dotnetLocation) { Remove-Item -Path $dotnetLocation -Recurse -Force -Confirm:$false | Out-Null }
 
 # Detecting powershell version and downloading the zip...
 Write-Output "Downloading dockerfile..."
