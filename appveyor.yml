@@ -18,13 +18,13 @@ build_script:
   - dotnet --version
   - ps: .\tools\download-dotnetcore.ps1
   - dotnet --version
-  #- ps: Invoke-AppveyorBuild
+  - ps: Invoke-AppveyorBuild
 
-# test_script:
-#   - ps: Invoke-AppveyorTest
+test_script:
+  - ps: Invoke-AppveyorTest
 
-# after_test:
-#   - ps: Invoke-AppVeyorAfterTest
+after_test:
+  - ps: Invoke-AppVeyorAfterTest
 
-# on_finish: 
-#   - ps: Invoke-AppveyorFinish
+on_finish: 
+  - ps: Invoke-AppveyorFinish
