@@ -44,7 +44,7 @@ $resp = Invoke-WebRequest -URI $dotNetSDKURL -UseBasicParsing -OutFile $dotnetZi
 Write-Output "Extracting dotnet SDK"
 Add-Type -Assembly System.IO.Compression.FileSystem | Out-Null
 
-Say "Extracting zip from $DownloadLink"
+Write-Output "Extracting zipfile..."
 [System.IO.Compression.ZipFile]::ExtractToDirectory($ziZipPathpfile, $ZipPath)
 
 Write-Output "Cleaning downloads..."
