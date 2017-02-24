@@ -16,6 +16,8 @@ install:
 
 build_script:
   - dotnet --version
+  - ps: .\tools\download-dotnetcore.ps1
+  - dotnet --version
   #- ps: Invoke-AppveyorBuild
 
 # test_script:
