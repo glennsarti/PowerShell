@@ -15,7 +15,8 @@ install:
   - ps: Invoke-AppveyorInstall
 
 build_script:
-  - ps: Invoke-AppveyorBuild
+  - dotnet --version
+  #- ps: Invoke-AppveyorBuild
 
 # test_script:
 #   - ps: Invoke-AppveyorTest
